@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>More Components</title>
+        <title>Dealing with State</title>
         <!-- React Library -->
         <script type="text/javascript" src="./scripts/react.js"></script>
         <script type="text/javascript" src="./scripts/react-dom.js"></script>
@@ -19,22 +19,46 @@
         <div id="container"></div>
 
         <script type="text/babel">
-            class Stuff extends React.Component {
+            class LightningCounter extends React.Component {
+                constructor(props) {
+                    super(props);
+
+                    this.state = {
+                        strikes: 0
+                    };
+                }
+                
                 render() {
                     return (
-                        <React.Fragment>
-                        <br/>
-                        </React.Fragment>
+                        <h1>{this.state.strikes}</h1>
+                    );
+                }
+            }
+
+            class LightningCounterDisplay extends React.Component {
+                render() {
+                    var divStyle = {
+                        width: 250,
+                        textAlign: 'center',
+                        backgroundColor: 'black',
+                        padding: 40,
+                        fontFamily: 'sans-serif',
+                        col0r: '#999',
+                        borderRadius: 10
+                    };
+
+                    return (
+                        <div style={divStyle}>
+                            <LightningCounter />
+                        </div>
                     );
                 }
             }
 
             ReactDOM.render(
-                <div>
-                    <Stuff />
-                </div>,
+                <LightningCounterDisplay />,
                 document.querySelector('#container')
-            );
+            )
         </script>
     </body>
 </html>
