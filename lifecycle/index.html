@@ -19,6 +19,25 @@
   <script type="text/babel">
       var destination = document.querySelector('#container');
 
+      class Counter extends React.Component {
+        render() {
+          var textStyle = {
+            fontSize: 72,
+            fontFamily: 'sans-serif',
+            color: '#333',
+            fontWeight: 'bold'
+          };
+
+          console.log('render: Counter component');
+
+          return(
+            <div style={textStyle}>
+              {this.props.display}
+            </div>
+          )
+        }
+      }
+
       class CounterParent extends React.Component {
         constructor(props) {
           super(props);
@@ -51,6 +70,26 @@
 
           return null;
         }
+
+        componentDidMount() {
+          console.log("componentDidMount: Component is inserted into the tree!");
+        }
+
+        componentWillMount() {
+          console.log("componentWillMount: Component is about to be removed from the DOM!");
+        }
+
+        shouldComponentUpdate(newProps, newState) {
+          console.log("shouldComponentUpdate: Should component update?");
+          if (newState.count < 5) {
+            console.log("shouldComponentUpdate: Component should update!");
+            return true;
+          } else {
+            ReactDOM.unmountComponentAtNode(destination);
+            console.log("shouldComponentUpdate: Component should not update!");
+            return false;
+          }
+        }
         
         render() {
             var backgroundStyle = {
@@ -64,7 +103,12 @@
             console.log()
 
             return (
-              <div style={backgroundStyle}></div>
+              <div style={backgroundStyle}>
+                <Counter display={this.state.count} />
+                <button onClick={this.increase}>
+                  +
+                </button>
+              </div>
             );
         }
       }
