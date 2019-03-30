@@ -82,7 +82,13 @@
                     <div className="colorArea">
                         <div style={squareStyle} className="colorSquare"></div>
                         <form onSubmit={this.setNewColor} >
-                            <input onChange={this.colorValue} placeholder="Enter a color value" />
+                            <input onChange={this.colorValue}
+                                ref={
+                                    function(el) {
+                                        self._input = el;
+                                    }
+                                } 
+                                placeholder="Enter a color value" />
                             <button type="submit">go</button>
                         </form>
                     </div>
