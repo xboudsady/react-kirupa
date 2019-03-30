@@ -18,7 +18,7 @@
             margin-bottom: 15px
         }
 
-        .colorArea {
+        .colorArea input {
             padding: 10px;
             font-size: 16px;
             border: 2px solid #CCC;
@@ -45,7 +45,57 @@
     <div id="container"></div>
 
     <script type="text/babel">
-        
+
+        class Colorizer extends React.Component {
+            constructor(props) {
+                super(props);
+
+                this.state = {
+                    color: '',
+                    bgColor: 'White'
+                }
+
+                this.colorValue = this.colorValue.bind(this);
+                this.setNewColor = this.setNewColor.bind(this);
+            }
+
+            colorValue(e) {
+                this.setState({
+                    color: e.target.value
+                });
+            }
+
+            setNewColor(e) {
+                this.setState({
+                    bgColor: this.state.color
+                });
+
+                e.preventDefault(e);
+            }
+
+            render() {
+                var squareStyle= {
+                    backgroundColor: this.state.bgColor
+                }
+
+                return(
+                    <div className="colorArea">
+                        <div style={squareStyle} className="colorSquare"></div>
+                        <form onSubmit={this.setNewColor} >
+                            <input onChange={this.colorValue} placeholder="Enter a color value" />
+                            <button type="submit">go</button>
+                        </form>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <div>
+                <Colorizer />
+            </div>,
+            document.querySelector('#container')
+        )
         
     </script>
 
