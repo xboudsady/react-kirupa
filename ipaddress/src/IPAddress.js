@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import './IPAddress.css';
 
 class IPAddress extends Component {
   render() {
     return(
       <div>
-        Blah!
+        <h1>{this.props.ip}</h1>
+        <p>( This is your IP address...probably :P )</p>
       </div>
     );
   }
