@@ -12,7 +12,29 @@ class TodoList extends Component {
   }
 
   addItem(e) {
+    var itemArray = this.state.items;
 
+    // Add item in array if input value is not empty
+    if (this._inputElement.value !== '') {
+      // Push an object into array
+      itemArray.unshift({
+        text: this._inputElement.value,
+        key: Date.now()
+      });
+
+      // update state for our new itemArray
+      this.setState({
+        items: itemArray
+      });
+
+      // reset the input to empty
+      this._inputElement.value = '';
+    }
+
+    // Log our current itemArray of objects
+    console.log(itemArray);
+
+    e.preventDefault();
   }
   
   
