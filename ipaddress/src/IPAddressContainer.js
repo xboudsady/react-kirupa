@@ -26,7 +26,7 @@ class IPAddressContainer extends Component {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var response = JSON.parse(xhr.responseText);
 
-      this.setState({
+      this.sgitetState({
         ip_address: response.ip
       });
     }
