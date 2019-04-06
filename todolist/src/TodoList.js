@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TodoItems from './TodoItems';
 
 class TodoList extends Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class TodoList extends Component {
     // Log our current itemArray of objects
     console.log(itemArray);
 
+    // blocks default behavior of form submission
     e.preventDefault();
   }
   
@@ -44,10 +46,12 @@ class TodoList extends Component {
         <div className="header">
           <form onSubmit={this.addItem}>
             <input ref={(a) => this._inputElement = a} 
-              placeholder="enter task"></input>
+              placeholder="enter task">
+            </input>
             <button type="submit">add</button>
           </form>
         </div>
+        <TodoItems entries={this.state.items} />
       </div>
     )
   }
