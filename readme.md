@@ -10,7 +10,7 @@ This app mainly focus on simple form submission and state management to hold eac
 
 ### [Project Folder](https://github.com/xboudsady/react-kirupa/tree/master/todolist)
 
-### [App Preview](https://kirupa-react-todo-app.surge.sh/{target="_blank"})
+### <a href="https://kirupa-react-todo-app.surge.sh" target="_blank">App Preview</a>)
 
 ### Screen Preview
 ![Todo App](https://github.com/xboudsady/react-kirupa/blob/master/app-screens/todo-app.png)
