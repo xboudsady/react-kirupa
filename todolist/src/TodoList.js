@@ -39,6 +39,18 @@ class TodoList extends Component {
     // blocks default behavior of form submission
     e.preventDefault();
   }
+
+  deleteItem(key) {
+    // create an array to store our items array, call the filter method to return items !== key
+    var filteredItems = this.state.items.filter(function(item) {
+      return (item.key !== key);
+    });
+
+    // update our state
+    this.setState({
+      items: filteredItems
+    });
+  }
   
   
   render() {
@@ -52,7 +64,8 @@ class TodoList extends Component {
             <button type="submit">add</button>
           </form>
         </div>
-        <TodoItems entries={this.state.items} />
+        <TodoItems entries={this.state.items}
+                    delete={this.deleteItem} />
       </div>
     )
   }
