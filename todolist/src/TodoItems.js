@@ -9,7 +9,7 @@ class TodoItems extends Component {
 
   // create an <li> element to the DOM tree
   createTasks(item) {
-    return <li key={item.key}>{item.text}</li>
+    return <li onClick={ () => this.delete(item.key)} key={item.key}>{item.text}</li>
   }
   
   render() {
