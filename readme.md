@@ -14,3 +14,9 @@ This app mainly focus on simple form submission and state management to hold eac
 
 ### Screen Preview
 ![Todo App](https://github.com/xboudsady/react-kirupa/blob/master/app-screens/todo-app.png)
+
+--
+
+## Sliding Menu
+
+React App that creates a sliding menu via components.
