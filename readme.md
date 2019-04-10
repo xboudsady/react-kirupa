@@ -8,9 +8,9 @@ To remove an item, just lick on an existing entry.
 
 This app mainly focus on simple form submission and state management to hold each entry in an array of tasks (objects).
 
-[To App folder.](../tree/master/todolist)
+### [Project Folder](../react-kirupa/tree/master/todolist)
 
-### (https://kirupa-react-todo-app.surge.sh/ "App Preview")
+### [App Preview](https://kirupa-react-todo-app.surge.sh/)
 
 ### Screen Preview
-!(https://github.com/xboudsady/react-kirupa/blob/master/app-screens/todo-app.png)
+![Todo App](https://github.com/xboudsady/react-kirupa/blob/master/app-screens/todo-app.png)
