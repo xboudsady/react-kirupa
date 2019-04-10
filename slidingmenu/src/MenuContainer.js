@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 
 class MenuContainer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visible: false
+    };
+
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+  toggleMenu() {
+    this.setState({
+      visible: !this.state.visible
+    });
+  }
+
   render() {
     return (
       <div>
