@@ -8,9 +8,19 @@ class MenuContainer extends Component {
       visible: false
     };
 
+    this.handleMouseDown = this.handleMouseDown.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
+  // event handler to toggle our toggleMenu()
+  handleMouseDown(e) {
+    this.toggleMenu();
+
+    console.log('clicked');
+    e.stopPropagation();
+  }
+
+  // change state for our menu true:false
   toggleMenu() {
     this.setState({
       visible: !this.state.visible
