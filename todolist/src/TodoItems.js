@@ -7,9 +7,16 @@ class TodoItems extends Component {
     this.createTasks = this.createTasks.bind(this);
   }
 
+  // delete an <li> elemen in the DOM tree
+  delete(key) {
+    this.props.delete(key);
+  }
+
   // create an <li> element to the DOM tree
   createTasks(item) {
-    return <li onClick={ () => this.delete(item.key)} key={item.key}>{item.text}</li>
+    return <li onClick={ () => this.delete(item.key)} 
+              key={item.key}
+              >{item.text}</li>
   }
   
   render() {
