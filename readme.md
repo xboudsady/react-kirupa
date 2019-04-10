@@ -10,7 +10,7 @@ This app mainly focus on simple form submission and state management to hold eac
 
 ### [Project Folder](https://github.com/xboudsady/react-kirupa/tree/master/todolist)
 
-### [App Preview](https://kirupa-react-todo-app.surge.sh")
+### [App Preview](https://kirupa-react-todo-app.surge.sh)
 
 ### Screen Preview
 ![Todo App](https://github.com/xboudsady/react-kirupa/blob/master/app-screens/todo-app.png)
@@ -20,3 +20,11 @@ This app mainly focus on simple form submission and state management to hold eac
 ## Sliding Menu
 
 React App that creates a sliding menu via components.
+
+### [Project Folder](https://github.com/xboudsady/react-kirupa/tree/master/slidingmenu)
+
+### [App Preview](https://kirupa-react-slidingmenu.surge.sh)
+
+### Screen Preview
+![Menuslider-1 App](https://github.com/xboudsady/react-kirupa/blob/master/app-screens/menuslider-1.png)
+![Menuslider-2 App](https://github.com/xboudsady/react-kirupa/blob/master/app-screens/menuslider-2.png)
