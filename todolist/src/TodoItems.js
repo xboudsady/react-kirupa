@@ -4,7 +4,7 @@ class TodoItems extends Component {
   constructor(props) {
     super(props);
 
-    this.createTasks = this.createTassks.bind(this);
+    this.createTasks = this.createTasks.bind(this);
   }
 
   // create an <li> element to the DOM tree
@@ -18,7 +18,7 @@ class TodoItems extends Component {
 
     return (
       <div>
-        {listItems};
+        {listItems}
       </div>
     )
   }
