@@ -1,18 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './MenuButton.css';
 
-class MenuButton extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return false;
-  }
-
+class MenuButton extends PureComponent {
   render() {
     console.log('Rendering: MenuButton');
 
     return (
       <button id="roundButton"
-        onMouseDown={this.props.handleMouseDown}
-      ></button>
+        onMouseDown={this.props.handleMouseDown}></button>
     );
   }
 }
