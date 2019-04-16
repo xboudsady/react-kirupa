@@ -31,6 +31,8 @@ React App that creates a sliding menu via components.
 
 --
 
+## Single Page App (SPA)
+
 React App that uses React Router to create a single page applicatiion.
 
 ### [Project Folder](https://github.com/xboudsady/react-kirupa/tree/master/react_spa)
